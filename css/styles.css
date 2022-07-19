@@ -8,7 +8,7 @@
   --basic-font: 'Roboto', sans-serif;
   --color-logo-name: #000000;
   --accent-color-font: #ffffff;
-  --header-backgroud-color: #ffffff;
+  --backgroud-color: #ffffff;
   --bcg-btn-hover-focus: #188ce8;
 }
 
@@ -18,12 +18,13 @@
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 body {
-  font-family: var(--basic-font);
+  background-color: var(--backgroud-color);
   color: var(--color-description);
-  background-color: #ffffff;
+  font-family: var(--basic-font);
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -80,7 +81,8 @@ button {
   padding-right: 32px;
   padding-left: 32px;
   cursor: pointer;
-  font-family: var(--basic-font);
+  border: none;
+  border-radius: 4px;
 }
 
 /* =======================================HEADER============================================= */
@@ -99,7 +101,7 @@ button {
   padding-top: 24px;
   padding-bottom: 25px;
 
-  background-color: var(--header-backgroud-color);
+  background-color: var(--backgroud-color);
   border-bottom: 1px solid #ececec;
 }
 
@@ -198,9 +200,7 @@ button {
 }
 
 .modal {
-  border-radius: 4px;
   background-color: var(--accent-color);
-  border: 1px solid #000000;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   font-weight: 700;
@@ -228,21 +228,15 @@ button {
 .desc {
   padding-top: 94px;
   padding-bottom: 94px;
-
-  background-color: var(--basic-color-background);
 }
 
 .job {
   padding-bottom: 94px;
-
-  background-color: var(--basic-color-background);
 }
 
 .our-team {
   padding-top: 94px;
   padding-bottom: 94px;
-
-  background-color: var(--basic-color-background);
 }
 
 .job-list {
@@ -262,7 +256,12 @@ button {
 .team-desc {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #ffffff;
+}
+
+.employee-card {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .heading-team {
@@ -325,9 +324,11 @@ button {
 
 /* =======================================FOOTER============================================= */
 
-.footer > .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background: var(--accent-color-background);
 }
 
 .footer > .container > .link.logo {
@@ -340,8 +341,6 @@ button {
 }
 
 address {
-  display: block;
-
   font-style: normal;
 }
 
@@ -349,7 +348,7 @@ address {
 .address-mail,
 .address-telefon {
   font-weight: 400;
-  line-height: 1.71x;
+  line-height: 1.71;
   color: var(--accent-color-font);
 }
 
@@ -375,10 +374,6 @@ address {
   color: var(--accent-color);
 }
 
-.footer {
-  background: var(--accent-color-background);
-}
-
 /* =======================================/FOOTER============================================= */
 
 /* =======================================PORTFOLIO============================================= */
@@ -390,9 +385,8 @@ address {
 
 .text-list {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 56px;
 }
 
 .list-btn:not(:last-child) {
@@ -400,17 +394,17 @@ address {
 }
 
 .list-button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
-  text-align: center;
   color: var(--color-title);
   background-color: var(--secondary-color-background);
-  cursor: pointer;
   letter-spacing: 0.03em;
-  font-family: inherit;
-  border-radius: 4px;
-  border: none;
 }
 
 .list-button:hover,
@@ -427,6 +421,8 @@ address {
 }
 
 .name-project {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -446,7 +442,6 @@ address {
   padding-left: 24px;
   border: 1px solid #eeeeee;
   border-top: none;
-  background-color: var(--header-backgroud-color);
 }
 
 /* ====================================/PORTFOLIO============================================= */
